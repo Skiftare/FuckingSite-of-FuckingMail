@@ -1,60 +1,87 @@
 body {
-	padding: 0;
-	margin: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
+    background: linear-gradient(45deg, rebeccapurple, lightcoral);
+    font-family: 'Montserrat', sans-serif;
 }
 
-#upload-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	width: 400px;
-	height: 400px;
-	outline: 2px dashed #5d5d5d;
-	outline-offset: -12px;
-	background-color: #e0f2f7;
-	font-family: 'Segoe UI';
-	color: #1f3c44;
+.Button {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    color: inherit;
+    display: inline-block;
+    font: inherit;
+    height: auto;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
 }
 
-#upload-container img {
-	width: 40%;
-	margin-bottom: 20px;
-	user-select: none;
+
+.input:focus {
+    outline: none;
 }
 
-#upload-container label {
-	font-weight: bold;
+.input::-moz-focus-inner {
+    border: 0;
 }
 
-#upload-container label:hover {
-	cursor: pointer;
-	text-decoration: underline;
+.input {
+    align-items: center;
+    background: #456BD9;
+    border: 2px solid transparent;
+    border-radius: 99em;
+    color: #fff;
+    display: flex;
+    font-weight: 600;
+    height: 2.5em;
+    min-width: 2.5em;
+    padding: 0 1em;
+    position: relative;
+    transition: 0.2s ease;
+    text-align: center;
+    width: 90%;
 }
 
-#upload-container div {
-	position: relative;
-	z-index: 10;
+.input::placeholder {
+    color: lightsteelblue;
 }
 
-#upload-container input[type=file] {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	position: absolute;
-	z-index: -10;
+.Button:focus .Button-inner {
+    border-color: #fff;
+    box-shadow: 0 0 0 2px #456BD9;
 }
 
-#upload-container label.focus {
-	outline: 1px solid #0078d7;
-	outline: -webkit-focus-ring-color auto 5px;
+.Button:hover .Button-inner {
+    filter: brightness(1.1);
+    color: antiquewhite;
 }
 
-#upload-container.dragover {
-	background-color: #fafafa;
-	outline-offset: -17px;
+.Button:active .Button-inner {
+    filter: brightness(0.9);
+    color: ivory;
+}
+
+p {
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 99em;
+    color: #fff;
+    display: flex;
+    font-weight: 600;
+    height: 2.5em;
+    min-width: 2.5em;
+    padding: 0 1em;
+    position: relative;
+    transition: 0.2s ease;
+    text-align: center;
+    width: 90%;
+}
+
+img {
+    width: 100px;
+    height: 100px;
 }
