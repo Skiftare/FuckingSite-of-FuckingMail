@@ -1,35 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en ru">
     <header>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
+        <a href="https://vk.cc/c597WB"> <img src="images/logo.png" alt="Fucking Mail" class="logo"> </a>
     </header>
+
     <body>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
         <div class="container">
-            <form >
-                <img src="images/logo.png" alt="Fucking Mail">
+            <form>
 
-                <input type="email" class = "input" placeholder="Email"><br>
-                <input type="password" class = "input" placeholder="Password"><br>
-                <button class="Button">
-                    <span class="input">
-                        Send nudes
-                    </span>
-                </button> <br>
-                <a href="#">Forgot Password?</a>
+                <div class="div1">
+                    <input type="email" class = "input" placeholder="Email" onkeydown="if(event.keyCode==13){return false;}"><br>
+                </div>
+
+                <div class="div2">
+                    <button class="Button Files">
+                        <span class="input Upload-image">
+                            <img src="images/upload.svg" alt="Upload" width = "50" height="50">
+                        </span>
+                    </button> <br>
+                </div>
+
+                <div class="div3">
+                    <button class="Button Submit">
+                        <span class="input btn">
+                            Send
+                        </span>
+                    </button> <br>
+                </div>
+
+                <div class="div4">
+                    <input type="text" class="input" placeholder="Theme" onkeydown="if(event.keyCode==13){return false;}"><br>
+                </div>
+
+                <div class="div5">
+                    <input type="text" class="input" placeholder="Write your message here..." onkeydown="if(event.keyCode==13){return false;}"><br>
+                </div>
+
+                <div class="div6">
+                    <p> If you want to support this project, you can <a href="https://www.donationalerts.com/r/sw1ftin" class="donate"> <ins> donate </ins> </a> </p><br>
+                </div>
+
+                <div class="div7">
+                    <p> There could be ads, but we don't have advertisers </p>
+                </div>
             </form>
-
-            <div class="drops">
-                <div class="drop drop-1"></div>
-                <div class="drop drop-2"></div>
-                <div class="drop drop-3"></div>
-                <div class="drop drop-4"></div>
-                <div class="drop drop-5"></div>
-            </div>
         </div>
+        <script src="script.js"></script>
     </body>
+
 </html>

@@ -1,12 +1,5 @@
-btn = document.querySelector(".Button-inner")
-receiver = document.querySelector(".receiver")
-
+btn = document.querySelector(".btn")
 
 btn.onclick = function () {
-    window.open('https://vk.cc/c597WB');
+    window.open('rickroll.html');
 }
-
-receiver.onclick = function () {
-    receiver.ariaPlaceholder = '';
-}
-
