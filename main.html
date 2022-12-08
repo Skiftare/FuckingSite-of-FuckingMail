@@ -1,143 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en ru">
+    <header>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <a href="https://vk.cc/c597WB"> <img src="images/logo.png" alt="Fucking Mail" class="logo"> </a>
+    </header>
 
-<html>
-<head>
-    <meta charset="utf-8">
+    <body>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <title>fuckingmail</title>
+        <div class="container">
+            <form>
 
-    <style>
+                <div class="div1">
 
-    .Button {
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    color: inherit;
-    display: inline-block;
-    font: inherit;
-    height: auto;
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    }
+                    <input type="email" class = "input" placeholder="Email" onkeydown="if(event.keyCode==13){return false;}"><br>
 
+                </div>
 
-    .Button:focus {
-    outline: none;
-    }
+                <div class="div2">
+                    <div class="image-upload Button Files">
+                        <label for="file-input" class="input Upload-image">
 
-    .Button::-moz-focus-inner {
-    border: 0;
-    }
+                            <img src="images/upload.svg" alt="Upload" width = "50" height="50"/>
 
-    .Button-inner {
-    align-items: center;
-    background: #456BD9;
-    border: 2px solid transparent;
-    border-radius: 99em;
-    color: #fff;
-    display: flex;
-    font-weight: 600;
-    height: 2.5em;
-    min-width: 2.5em;
-    padding: 0 1em;
-    position: relative;
-    transition: 0.2s ease;
-    width: 100%;
-    }
+                        </label>    
 
-    .Button:focus .Button-inner {
-    border-color: #fff;
-    box-shadow: 0 0 0 2px #456BD9;
-    }
+                        <input id="file-input" type="file" />
+                    </div>
+                </div>
 
-    .Button:hover .Button-inner {
-        filter: brightness(1.1);
-        color: antiquewhite;
-    }
+                <div class="div3">
+                    <button class="Button Submit">
+                        <span class="input btn">
+                            Send
+                        </span>
+                    </button> <br>
+                </div>
 
-    .Button:active .Button-inner {
-        filter: brightness(0.9);
-        color: ivory;
-    }
+                <div class="div4">
+                    <input type="text" class="input" placeholder="Theme" onkeydown="
+                    if(event.keyCode==13 ){
+                        return false;
+                    }"
+                    ><br>
+                </div>
 
-    * {
-    box-sizing: border-box;
-    margin: 0;
-    }
+                <div class="div5">
+                    <textarea placeholder= "Write there" autocomplete="on"
+                    ></textarea>
 
-    html {
-    background: #DBE5EA;
-    height: 100%;
-    }
+                </div>
 
-    body {
-    align-items: center;
-    display: flex;
-    font: 1.125em/1.5625 Source Sans Pro, Tahoma, Helvetica Neue, Helvetica, Arial, sans-serif;
-    justify-content: center;
-    margin: 0;
-    padding: 1em;
-    min-height: 100%;
-    }
+                <div class="div6">
+                    <p> If you want to support this project, you can <a href="https://www.donationalerts.com/r/sw1ftin" class="donate"> <ins> donate </ins> </a> </p><br>
+                </div>
 
-    .Badge {
-    align-items: center;
-    background: #ce2c6c;
-    border: 2px solid #fff;
-    border-radius: 99em;
-    color: #fff;
-    display: flex;
-    font-size: 0.77em;
-    font-weight: 400;
-    height: 1.44em;
-    justify-content: center;
-    line-height: 1;
-    min-width: 1.44em;
-    position: absolute;
-    right: -2px;
-    top: -2px;
-    }
-
-    .u-hiddenVisually {
-    border: 0 !important;
-    clip: rect(1px, 1px, 1px, 1px) !important;
-    height: 1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important;
-    }
-    </style>
-
-    <meta charset="UTF-8">
-    <title>Поле загрузки файлов, которое мы заслужили</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-
-    <button class="Button">
-  <span class="Button-inner">
-    Отправить
-  </span>
-    </button>
+                <div class="div7">
+                    <p> There could be ads, but we don't have advertisers </p>
+                </div>
 
 
-</head>
-<body>
-<form id="upload-container" method="POST" action="send.php">
-    <img id="upload-image" src="upload.svg">
-    <div>
-        <input id="file-input" type="file" name="file" multiple>
-        <label for="file-input">Выберите файл</label>
-        <span>или перетащите его сюда</span>
-    </div>
-</form>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
 
-</body>
 </html>
