@@ -1,5 +1,9 @@
-html, body {
+html, body, .container {
     height: 100%;
+}
+
+.container {
+    width: 95%;
 }
 
 body {
@@ -34,7 +38,7 @@ body {
     border: 0;
 }
 
-.input, p {
+.input, p, .list {
     align-items: center;
     background: #456BD9;
     border: 2px solid transparent;
@@ -44,11 +48,13 @@ body {
     font-weight: 600;
     height: 2.5em;
     min-width: 2.5em;
-    padding: 0 1em;
+    padding: 0;
+    margin: 0;
     position: relative;
     transition: 0.2s ease;
     text-align: center;
     width: 100%;
+    font-size: 18px;
 }
 
 .input::placeholder {
@@ -79,14 +85,20 @@ body {
     width: 70px;
     height: 70px;
     text-align: center;
+    align-content: center;
     justify-content: center;
     border-radius: 10px;
     margin: 10px 30px;
+    outline: black dotted;
+}
+
+#file-input {
+    display: none;
 }
 
 form {
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-columns: 5fr 1fr 1fr;
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -103,9 +115,57 @@ form {
 
 .div1, .div2, .div3, .div4, .div5, .div6, .div7 {
     outline: black dotted;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.div1 input {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.div2 {
+    text-align: center;
+}
+
+.div4 input {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.div5 input {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.div6 p {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .donate {
     margin-left: 5px;
     color: greenyellow;
 }
+
+#list {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: none;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    text-align: left;
+    padding-left: 10px;
+}
+

@@ -19,11 +19,17 @@
                 </div>
 
                 <div class="div2">
-                    <button class="Button Files">
-                        <span class="input Upload-image">
-                            <img src="images/upload.svg" alt="Upload" width = "50" height="50">
-                        </span>
-                    </button> <br>
+                    <div class="upload">
+                        <div class="image-upload Button Files">
+                            <label for="file-input" class="input Upload-image">
+                                <img src="images/upload.svg" alt="Upload" width = "50" height="50">
+                            </label>
+
+                            <input name="file-input" id="file-input" type="file" multiple/>
+                        </div>
+
+                    </div>
+                    <br>
                 </div>
 
                 <div class="div3">
@@ -47,7 +53,14 @@
                 </div>
 
                 <div class="div7">
-                    <p> There could be ads, but we don't have advertisers </p>
+                    <p id="empty-list"> There could be files, but you didn't upload anything </p>
+                    <div id="list" class="list">
+                        <ul>
+                            <li>
+                                Uploaded:
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </form>
         </div>
