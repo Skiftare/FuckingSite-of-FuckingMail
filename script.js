@@ -1,7 +1,13 @@
-btn = document.querySelector(".btn")
+function button() {
+    // window.open('about.html');
 
-btn.onclick = function () {
-    window.open('rickroll.html');
+    let message = {
+        'receiver' : document.querySelector(".receiver").value,
+        'theme' : document.querySelector(".mail-theme").value,
+        'text' : document.querySelector("textarea").value
+    };
+
+    console.log(message);
 }
 
 function addNewFile(name) {
@@ -24,4 +30,10 @@ fileUploader.onchange = function() {
         console.log(files[i].name);
         addNewFile(files[i].name);
     }
+}
+
+theme = document.getElementById('theme')
+
+theme.onclick = function () {
+    console.log('Changed theme');
 }

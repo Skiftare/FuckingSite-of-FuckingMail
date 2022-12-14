@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
-        <div class="navigation">
+        <div class="navigation" style="width: 100%">
             <div class="logo">
                 <a href="https://vk.cc/c597WB"> <img src="images/logo.png" alt="Fucking Mail" class="logo"> </a>
             </div>
@@ -19,6 +19,7 @@
                 <ul class="bar">
                     <li><a href="main.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
+                    <li><button id="theme"><img src="images/moon.png"></button></li>
                 </ul>
             </div>
         </div>
@@ -27,7 +28,7 @@
             <form>
 
                 <div class="div1">
-                    <input type="email" class = "input" placeholder="Email" onkeydown="if(event.keyCode==13){return false;}"><br>
+                    <input type="email" class = "input receiver" placeholder="Email" onkeydown="if(event.keyCode==13){return false;}"><br>
                 </div>
 
                 <div class="div2">
@@ -45,7 +46,7 @@
                 </div>
 
                 <div class="div7">
-                    <button class="Button Submit">
+                    <button class="Button Submit" onclick="button()">
                         <span class="input btn">
                             Send
                         </span>
@@ -53,11 +54,11 @@
                 </div>
 
                 <div class="div4">
-                    <input type="text" class="input" placeholder="Theme" onkeydown="if(event.keyCode==13){return false;}"><br>
+                    <input type="text" class="input mail-theme" placeholder="Theme" onkeydown="if(event.keyCode==13){return false;}"><br>
                 </div>
 
                 <div class="div5">
-                    <textarea class="input textarea" placeholder="Write your message here..." autocomplete="on" onkeydown="if(event.keyCode==13){return false;}"
+                    <textarea class="input textarea" placeholder="Write your message here..." autocomplete="on"
                     ></textarea> <br>
                 </div>
 
