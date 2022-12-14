@@ -1,15 +1,19 @@
 html, body, .container {
-    height: 100%;
+    min-height: 100%;
 }
 
 .container {
-    width: 95%;
+    width: 98%;
+    justify-content: center;
+    margin: 10px;
 }
 
 body {
     background: linear-gradient(45deg, rebeccapurple, lightcoral) no-repeat;
     background-size: 100%;
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .Button {
@@ -76,11 +80,6 @@ body {
     color: ivory;
 }
 
-.logo {
-    width: 100px;
-    height: 100px;
-}
-
 .Upload-image {
     width: 70px;
     height: 70px;
@@ -98,20 +97,20 @@ body {
 
 form {
     display: grid;
-    grid-template-columns: 5fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     width: 100%;
 }
 
-.div1 { grid-area: 1 / 1 / 2 / 2; }
-.div2 { grid-area: 1 / 2 / 2 / 3; }
-.div3 { grid-area: 1 / 3 / 2 / 4; }
-.div4 { grid-area: 2 / 1 / 3 / 2; }
-.div5 { grid-area: 3 / 1 / 6 / 2; }
-.div6 { grid-area: 2 / 2 / 3 / 4; }
-.div7 { grid-area: 3 / 2 / 6 / 4; }
+.div1 { grid-area: 1 / 1 / 2 / 4; }
+.div2 { grid-area: 1 / 4 / 2 / 5; }
+.div3 { grid-area: 2 / 4 / 3 / 6; }
+.div4 { grid-area: 2 / 1 / 3 / 4; }
+.div5 { grid-area: 3 / 1 / 6 / 4; }
+.div6 { grid-area: 3 / 4 / 6 / 6; }
+.div7 { grid-area: 1 / 5 / 2 / 6; }
 
 .div1, .div2, .div3, .div4, .div5, .div6, .div7 {
     outline: black dotted;
@@ -147,6 +146,13 @@ form {
     padding: 0;
 }
 
+.div7 {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
 .donate {
     margin-left: 5px;
     color: greenyellow;
@@ -160,12 +166,81 @@ form {
     padding-bottom: 10px;
 }
 
-ul {
+.ul {
     list-style-type: none;
 }
 
-li {
+.ul li {
     text-align: left;
     padding-left: 10px;
 }
 
+.Submit {
+    height: 100%;
+    width: 100%;
+}
+
+.btn {
+    height: 80%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.textarea {
+    resize: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#list, #empty-list {
+    border-radius: 10px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+}
+
+.bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.bar li {
+    display: inline;
+    float: left;
+    height: 100%;
+    font-size: 30px;
+}
+
+.bar li a {
+    display: block;
+    padding: 8px;
+    height: 50px;
+    width: 200px;
+    border: black dotted;
+    text-decoration: none;
+    color: white;
+}
+
+.bar li a:hover {
+    background: deepskyblue;
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
+    height: 70px;
+    margin: 0 0 20px 0;
+    padding: 0;
+    background: #456BD9 no-repeat;
+}
