@@ -1,5 +1,7 @@
-html, body, .container {
+html, body, footer, .container {
     min-height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -9,8 +11,7 @@ html, body, .container {
 }
 
 body {
-    background: linear-gradient(45deg, rebeccapurple, lightcoral) no-repeat;
-    background-size: 100%;
+    background: linear-gradient(45deg, rebeccapurple, lightcoral) no-repeat center center fixed;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -101,7 +102,7 @@ body {
 
 form {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr) 0fr 1fr;
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -110,13 +111,12 @@ form {
 
 .div1 { grid-area: 1 / 1 / 2 / 4; }
 .div2 { grid-area: 1 / 4 / 2 / 5; }
-.div3 { grid-area: 2 / 4 / 3 / 6; }
+.div3 { grid-area: 1 / 5 / 2 / 6; }
 .div4 { grid-area: 2 / 1 / 3 / 4; }
 .div5 { grid-area: 3 / 1 / 6 / 4; }
-.div6 { grid-area: 3 / 4 / 6 / 6; }
-.div7 { grid-area: 1 / 5 / 2 / 6; }
+.div6 { grid-area: 2 / 4 / 6 / 6; }
 
-.div1, .div2, .div3, .div4, .div5, .div6, .div7 {
+.div1, .div2, .div3, .div4, .div5, .div6 {
     /*outline: black dotted;*/
     margin: 0;
     padding: 0;
@@ -131,6 +131,15 @@ form {
 
 .div2 {
     text-align: center;
+    justify-content: center;
+    vertical-align: center;
+}
+
+.div3 {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
 }
 
 .div4 input {
@@ -138,9 +147,24 @@ form {
     border-radius: 10px;
 }
 
-.div5 input {
+.div5 {
+    background: #456BD9;
+    height: 100%;
+    width: 100%;
+}
+
+.div5 textarea {
+    resize: none;
+    width: 98%;
     height: 100%;
     border-radius: 10px;
+    text-align: left;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.div6 {
+    height: 100%;
 }
 
 .div6 p {
@@ -148,13 +172,6 @@ form {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-.div7 {
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    text-align: center;
 }
 
 .donate {
@@ -191,15 +208,6 @@ form {
     justify-content: center;
 }
 
-.textarea {
-    resize: none;
-    width: 95%;
-    height: 100%;
-    border-radius: 10px;
-    text-align: left;
-    padding: 2.5%;
-}
-
 #list, #empty-list {
     border-radius: 10px;
 }
@@ -212,6 +220,7 @@ form {
     width: 60px;
     height: 60px;
     margin: 0 10px;
+    cursor: default;
 }
 
 .bar {
@@ -245,7 +254,7 @@ form {
     color: white;
 }
 
-.bar li a:hover {
+.bar li:hover {
     background: deepskyblue;
 }
 
@@ -275,4 +284,24 @@ form {
     margin: 0 0 20px 0;
     padding: 0;
     background: #456BD9 no-repeat;
+}
+
+footer ul {
+    display: grid;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    grid-template-columns: 100px 1fr;
+    grid-gap: 100px;
+    height: 30px;
+    margin: 30px 0 0 0;
+    padding: 20px;
+    background: #456BD9 no-repeat;
+}
+
+footer ul li {
+    display: inline;
+    float: left;
+    height: 100%;
+    font-size: 20px;
 }
