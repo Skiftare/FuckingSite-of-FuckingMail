@@ -34,7 +34,6 @@ body {
     user-select: none;
 }
 
-
 .input:focus {
     outline: none;
 }
@@ -74,6 +73,8 @@ body {
 .Button:hover .btn {
     filter: brightness(1.1);
     color: antiquewhite;
+    transform: translateY(-2px);
+    transition: .3s ease-in-out;
 }
 
 .Button:active .btn {
@@ -230,6 +231,7 @@ form {
     height: 70px;
     top: 0;
     width: 100%;
+    gap: 10px;
 }
 
 .bar li {
@@ -237,6 +239,8 @@ form {
     float: left;
     height: 100%;
     font-size: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .bar li:nth-child(3) {
@@ -245,17 +249,52 @@ form {
 }
 
 .bar li a {
-    display: block;
+    display: inline-block;
     padding: 8px;
     height: 50px;
     width: 200px;
     /*border: black dotted;*/
     text-decoration: none;
+    text-align: center;
+    cursor: pointer;
     color: white;
 }
 
+@keyframes hovered_block {
+    from {
+        background: #456BD9;
+        border-radius: 0;
+        font-size: 30px;
+    }
+    to {
+        background: #2B4FB3;
+        border-radius: 30px;
+        font-size: 35px;
+    }
+}
+
+@keyframes unhovered_block {
+    from {
+        background: #2B4FB3;
+        border-radius: 30px;
+        font-size: 35px;
+    }
+    to {
+        background: #456BD9;
+        border-radius: 0;
+        font-size: 30px;
+    }
+}
+
+
 .bar li:hover {
-    background: deepskyblue;
+    animation: 0.5s ease forwards hovered_block;
+    animation-direction: normal;
+    transition: height .3s;
+}
+
+.bar li {
+    animation: 0.3s ease forwards unhovered_block;
 }
 
 #theme {
@@ -279,10 +318,10 @@ form {
 .navigation {
     display: grid;
     grid-template-columns: 100px 1fr;
-    grid-gap: 10px;
+    gap: 10px;
     height: 70px;
     margin: 0 0 20px 0;
-    padding: 0;
+    padding: 1px 0 0 0;
     background: #456BD9 no-repeat;
 }
 
@@ -305,3 +344,4 @@ footer ul li {
     height: 100%;
     font-size: 20px;
 }
+
